@@ -5,9 +5,6 @@ TASK: ride
 """
 fin = open ('ride.in', 'r')
 fout = open ('ride.out', 'w')
-fout.write (str(sum) + '\n')
-fout.close()
-
 
 import string
 from functools import reduce
@@ -29,8 +26,8 @@ def ridehere(word):
     return reduce(lambda x, y: x*y, total)%47
 
 
-word1 = fin.readline()
-word2 = fin.readline()
+word1 = fin.readline().strip()
+word2 = fin.readline().strip()
 if ridehere(word1) == ridehere(word2):
     fout.write(f"GO\n")
 else:
@@ -38,6 +35,7 @@ else:
 
 
 
+fout.close()
 
 
 

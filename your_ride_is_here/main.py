@@ -5,8 +5,6 @@ TASK: ride
 """
 fin = open ('ride.in', 'r')
 fout = open ('ride.out', 'w')
-x,y = map(int, fin.readline().split())
-sum = x+y
 fout.write (str(sum) + '\n')
 fout.close()
 
@@ -31,13 +29,13 @@ def ridehere(word):
     return reduce(lambda x, y: x*y, total)%47
 
 
-# word1 = input()
-# word2 = input()
-# if ridehere(word1) == ridehere(word2):
-#     print("GO")
-# else:
-#     print("STAY")
-#
+word1 = fin.readline()
+word2 = fin.readline()
+if ridehere(word1) == ridehere(word2):
+    fout.write(f"GO\n")
+else:
+    fout.write(f"STAY\n")
+
 
 
 

@@ -1,11 +1,26 @@
-overlap = [1, 2, 3]
-if overlap:
-    print("Hello!")
+
+
+
+s = {4: 10, 2: 9}
+if 9 not in s.values():
+    print("oh no")
 else:
-    print("Bye!")
+    print("it's there")
 
 
+# lst = [[1, 2]]
+# for entry in s:
+#     if s[entry] not in lst:
+#         lst.append(s[entry])
+# print(lst)
+#
+#
 
+# overlap = [1, 2, 3]
+# if overlap:
+#     print("Hello!")
+# else:
+#     print("Bye!")
 
 
 

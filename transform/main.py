@@ -45,10 +45,9 @@ def two_seventy(pattern, N):
 
 def reflection(pattern, N):
 
-    #CHECK THIS!!!
     return list(reversed(pattern))
 
-
+# assert reflection([[1, 0, 1], [0, 0, 0], [1, 1, 0]], 3) == [[1, 1, 0], [0, 0, 0], [1, 0, 1]], reflection([[1, 0, 1], [0, 0, 0], [1, 1, 0]], 3)
 
 def check(pattern, real, N):
     '''

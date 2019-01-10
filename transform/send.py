@@ -1,3 +1,11 @@
+'''
+ID: jennife29
+LANG: PYTHON3
+TASK: transform
+'''
+
+
+
 def in_list(chara_line):
     '''
     chara_line is one line of a whole chara pattern
@@ -123,7 +131,7 @@ def solve(pattern, real, N):
     possible = []
     # print(reflection(pattern, N))
     if pattern == real:
-        return 6
+        possible.append(6)
     if check(ninetydegrees(pattern, N), real, N):
         possible.append(1)
 
@@ -146,19 +154,20 @@ def solve(pattern, real, N):
 
 
 
-N = int(input())
-chara_pattern1 = []
-for n in range(N):
-    chara_pattern1.append(in_list(input()))
+with open('transform.in') as fin, open("transform.out", 'w') as fout:
+    N = int(fin.readline().strip())
+    chara_pattern1 = []
+    for n in range(N):
+        chara_pattern1.append(in_list(fin.readline().strip()))
+    pattern = convert(chara_pattern1)
 
-#Remember when doing send.py I need to specify that it's a string
+    chara_pattern2 = []
+    for x in range(N):
+        chara_pattern2.append(in_list(fin.readline().strip()))
+    real = convert(chara_pattern2)
 
-pattern = convert(chara_pattern1)
+    fout.write(f"{solve(pattern, real, N)}\n")
 
-chara_pattern2 = []
-for x in range(N):
-    chara_pattern2.append(in_list(input()))
 
-real = convert(chara_pattern2)
 
-print(solve(pattern, real, N))
+
